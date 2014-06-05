@@ -1,0 +1,42 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+<div class="featureimage">
+      {{widget('feature', 'featurehome', {"header": "New & Vintage Bicycles Now on Sale", "strapline":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada.Donec lacinia a nisl at suscipit.", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+  <header class="bk-header">
+      <div class="header-container wrapper clearfix">
+          <div class="companyheader clearfix">
+              {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+              {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+          </div>
+      </div>
+  </header> 
+</div>
+
+<div class="featurebtn-container">
+</div>
+
+<div class="navbar clearfix">
+    {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+</div>
+
+<div class="canvas">
+    <div class="page-wrap">
+        <div class="mainzone wrapper clearfix">
+            {{zone('main')|raw}}
+        </div>
+    </div>
+</div>
+          
+<footer class="bk-footer">
+    <div class="footer-container">
+        {{widget('profile', 'footerwidget2', { 'profileType':'address', 'address':'profile', 'refreshtime':'1800000'})|raw}}
+        {{widget('profile', 'footerwidget1', { 'profileType':'socialicons', 'strapline':'socialicons', 'refreshtime':'1800000'})|raw}}
+    </div>
+</footer>
+
+{% endblock %}
+

@@ -1,0 +1,23 @@
+<header class="template-header">
+	<div class="header-main container">
+		<div class="row">
+			<div class="header-title span-6">
+				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+				{{widget('companyname', 'companyname', {"business": "LOREM IPSUM"})|raw}}
+			</div>
+			<nav class="template-nav span-6">
+				{{widget('extendednavigation', 'navigationheader', { "showTplWidget":0 })|raw}}
+			</nav>
+		</div>
+	</div>
+	<div class="header-details">
+		<div class="container">
+			<div class="row">
+				<div class="header-text span-6">
+					{{widget('profile', 'contactemail', { 'profileType':'email'})|raw}}
+					{{widget('profile', 'contactnumber', { 'profileType':'phone'})|raw}}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
